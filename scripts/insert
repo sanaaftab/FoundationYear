@@ -8,7 +8,12 @@ foot=$(sed -n '/footer/,$p' ../html/template.html)
 #Debugging
 echo $head
 echo $foot
-echo $locationHTML
 
-#Inseting header and footer into the desired document
-sed -i "1i'$head'" ../html/$1
+#Generating a temporary file
+temp=$(mktemp)
+
+#Inserting header and footer into the desired document using the temporary file
+echo $head >> $temp
+cat ../html/$1 >> $temp
+echo $foot >> $temp
+mv $temp ../html/$1
