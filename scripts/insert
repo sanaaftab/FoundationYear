@@ -1,0 +1,14 @@
+#!/bin/bash
+#Script to insert a header and a footer into a html document from a template
+
+#Extracting header and footer from template document
+head=$(sed '\,/head,q' ../html/template.html)
+foot=$(sed -n '/footer/,$p' ../html/template.html)
+
+#Debugging
+echo $head
+echo $foot
+echo $locationHTML
+
+#Inseting header and footer into the desired document
+sed -i "1i'$head'" ../html/$1
