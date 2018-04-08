@@ -2,7 +2,7 @@
 #Script to insert a timestamp into the footer of a html document
 #By Benjamin Piggott, 2018
 
-#variable to store current date
+#Variable to store current date
 today=$(date +%Y-%m-%d)
 
 
