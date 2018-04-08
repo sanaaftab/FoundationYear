@@ -20,3 +20,6 @@ echo "$foot" >> $temp
 
 #Replacing the orginal document with the temporary file
 mv $temp ../html/$1
+
+#Updating last edit timestamp in the footer of the document
+timestamp ../html/$1
