@@ -1,5 +1,19 @@
+html {
+	box-sixing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	background-color: #f2f2f2;
+}
+
+body, html {
+	height: 100%;
 	margin: 0;
 }
 
@@ -23,11 +37,16 @@ body {
 }
 
 .topnav a.active {
-  	background-color: #56AE91;
+  	background-color: #511180;
   	color: white;
 }
 
-.dropbtn {
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn
 	font-size: 17px;
 	border: none;
 	outline: none;
@@ -36,18 +55,16 @@ body {
 	background-color: inherit;
 }
 
-.dropdown {
-	float: left;
-	overflow: hidden;
-	display: inline-block;
+.topnav a:hover, .dropdown:hover .dropbtn {
+	background-color: #ddd;
 }
 
 .dropdown-content {
-	top: 47px;
+	top: 48px;
 	display: none;
 	position: absolute;
 	background-color: #f9f9f9;
-	min-width: 100%;
+	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
  	z-index: 1;
 }
@@ -65,20 +82,23 @@ body {
 	background-color: #eee;
 }
 
-.topnav a:hover, .dropdown:hover .dropbtn {
-	background-color: #ddd;
-}
-
 .dropdown:hover .dropdown-content {
 	display: block;
 }
 
+.logo {
+	float: right;
+	padding: 5px 8px 0px 5px;
+}
+
 .main {
-	padding: 80px;
-	text-align: center;
-	background: #88D8C2;
-	color: white;
-	height: 200px;
+	min-height: 500px;
+	background-attachment: fixed;
+	background-image: url("uom.jpg");
+	height: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .row1 {
@@ -89,7 +109,11 @@ body {
 .column {
 	float: left;
 	width: 33.33%;
-	height: 250px;
+	height: 400px;
+}
+
+.title1 {
+	padding: 5px 10px;
 }
 
 .row1:after {
@@ -99,19 +123,82 @@ body {
 }
 
 .row2 {
-	display: flex;
-	flex-wrap: wrap;
+	padding: 10px 20px;
 }
 
-.row2:after {
+.column2 {
+	float: left;
+	width: 32%;
+	margin-bottom: 16px;
+	padding: 0px 8px;
+}
+
+
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+	padding: 0px 40px 0px 26px;
+}
+
+.container::after, .row2::after {
 	content: "";
-	display: table;
 	clear: both;
+	display: table;
 }
 
-.uomcolumn {
+.title {
+	color: grey;
+}
+
+.button {
+   	border: none;
+    	outline: 0;
+   	display: inline-block;
+    	padding: 8px;
+    	color: white;
+    	background-color: #000;
+    	text-align: center;
+    	cursor: pointer;
+    	width: 100%;
+}
+
+.button:hover {
+	background-color: #9f89b0;
+}
+
+.pagecolumn {
 	float: left;
 	height: 300px;
+	text-align: center;
+}
+
+.left {
+	width: 65%;
+	background-color: #f2f2f2;
+}
+
+.right {
+	width: 35%;
+	background-color: #d9d9d9;
+}
+
+.left2 {
+	width: 35%;
+	background-color: #d9d9d9;
+}
+
+.right2 {
+	width: 65%;
+	background-color: #f2f2f2;
+}
+
+.pagerow:after {
+  	content: "";
+    	display: table;
+    	clear: both;
 }
 
 .footer {
