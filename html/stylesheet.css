@@ -19,10 +19,6 @@ body, html {
 
 /* Navigation bar */
 
-.active {
-	background-color: #511180;
-}
-
 #wrap	{
 	width: 100%; /* Spans the width of the page */
 	height: 50px;
@@ -60,7 +56,7 @@ body, html {
 }
 
 .navbar li:hover a {
-	background-color: #ddd;
+	background-color: #f9f9f9;
 	color: black;
 }
 
@@ -86,6 +82,20 @@ body, html {
 
 .navbar li ul li a:hover	{
 	background-color: #ddd;
+}
+
+/* Highlighting for current document in navigation bar */
+
+.active {
+	background-color: #511180;
+}
+
+.active-sub {
+	background-color: #8949b8;
+}
+
+.active-sub:hover {
+	background-color: #6d2d9c;
 }
 
 /* */
