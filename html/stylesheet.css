@@ -100,10 +100,10 @@ body, html {
 
 /* Footer */
 
-.footer {
-	padding: 5px;
+footer {
+	padding: 10px;
 	background-color: #111212;
-	color: white;
+	color: #f2f2f2;
 }
 
 /*
