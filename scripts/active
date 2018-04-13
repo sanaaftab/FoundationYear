@@ -5,8 +5,12 @@
 #Extract title of html document to determine file name and then forced to lowercase
 title=$(grep -Po '(?<=(<title>)).*(?=</title>)' ../html/$1)
 
-#Ensure no button is set to active in the document
+#Ensure no item is set to active in the document
 sed -e 's/class="active" //g' -i ../html/$1
+
+#Ensure no sub item is also set to active in the document 
+sed -e 's/class="active-sub" //g' -i ../html/$1
+
 
 #Checking if document is in a submenu
 if grep -e "`echo $title | tr '[:upper:]' '[:lower:]'`" submenu; then
