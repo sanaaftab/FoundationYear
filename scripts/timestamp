@@ -5,12 +5,5 @@
 #Variable to store current date
 today=$(date +%Y-%m-%d)
 
-
-#If statement to check if document contains a timestamp
-if grep -q 'id="timestamp"' ../html/$1; then
-  #Timsetamp present so updating timestamp
-  sed -r -i "s|[0-9]{4}-[0-9]{2}-[0-9]{2}|$today|g" ../html/$1
-else
-  #Timestamp not present so adding a html element with timestamp to footer
-  sed -i "s|</footer>|  \<p id=\"timestamp\"\>Last edited: $today\<\/p\>\\n  \<\/footer\>|g" ../html/$1
-fi
+#Updating timestamp
+sed -r -i "s|[0-9]{4}-[0-9]{2}-[0-9]{2}|$today|g" ../html/$1
