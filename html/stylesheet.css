@@ -88,12 +88,17 @@ body, html {
 	background-color: #511180;
 }
 
-.active-navbar-sub {
-	background-color: #8949b8;
+.active-navbar:hover {
+	background-color: #f9f9f9;
 }
 
-.active-navbar-sub:hover {
-	background-color: #6d2d9c;
+.active-sub-navbar {
+	background-color: #8949b8 !important;
+	color: #f2f2f2 !important;
+}
+
+.active-sub-navbar:hover {
+	background-color: #6d2d9c !important;
 }
 
 /* Footer */
