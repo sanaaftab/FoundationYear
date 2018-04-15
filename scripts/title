@@ -6,7 +6,4 @@
 name=$(echo $1 | cut -f 1 -d '.')
 
 #Replace the current title in the document with the filename
-sed -r -i "s|<title>.*</title>|<title>$name</title>|g" ../html/$1
-
-#Updating last edit timestamp in the footer of the document
-timestamp ../html/$1
+sed -r -i "s|<title>.*</title>|<title>${name^}</title>|g" ../html/$1

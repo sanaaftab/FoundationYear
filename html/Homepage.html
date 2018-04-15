@@ -5,78 +5,83 @@
 <head>
 	<title>Homepage</title>
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-	<div class="topnav">
-		<a class="active" href="#home">HOME</a>
-		<a href="http://www.manchester.ac.uk/">UoM</a>
-		<a href="http://www.manchester.ac.uk/">SoCS</a>
-		<div class="dropdown">
- 			<a class="dropbtn">MEMBERS</a>
- 			<div class="dropdown-content">
-    				<a href="#ARYA">ARYA</a>
-    				<a href="#BEN">BEN</a>
-    				<a href="#SANA">SANA</a>
-  			</div>
-		</div>
-		<div class="logo"> <img src="logo.png" alt="logo"> </div>
+	<div id="wrap-navbar">
+		<ul class="navbar">
+			<li><a class="active-navbar" href="#home">HOME</a></li>
+			<li><a href="http://www.manchester.ac.uk/">UoM</a></li>
+			<li><a href="http://www.cs.manchester.ac.uk/">SoCS</a></li>
+			<li><a href="">MEMBERS</a>
+				<ul>
+					<li><a href="#arya">ARYA</a></li>
+					<li><a href="#ben">BEN</a></li>
+					<li><a href="#sana">SANA</a></li>
+				</ul>
+			</li>
+			<li><a href="">INFO</a>
+				<ul>
+					<li><a href="markup">MARKUP</a></li>
+					<li><a href="#scripting">SCRIPTING</a></li>
+				</ul>
+			</li>
+		</ul>
 	</div>
-
 </head>
 <body>
+	<script src="google-maps.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiz9IDO_iRJ9SRUMjglXuye3BD1EQfM7o&callback=initMap"></script>
 
-<div class="main"></div>
+	<div class="main-home"></div>
 
-<div class="row1">
-	<div class="column">
-		<div class="title1"><h3> THE UNIVERSITY OF MANCHESTER </h3></div>
-	</div>
-	<div class="column" style="background-color:#d9d9d9"> </div>
-	<div class="column">
-		<div class="title1"><h3> SCHOOL OF COMPUTER SCIENCE </h3></div>
-	 </div>
-</div>
-
-<div class="row2">
-	<div class="column2">
-	<div class="card">
-		<img src="image5.png" alt="arya" style="width:100%">
-		<div class="container">
-			<h2>ARYA JAHANGIRI</h2>
-			<p class="title">Some information</p>
-			<p>Some more info</p>
-			<p>Some more info</p>
-			<p><button class="button">Arya's Profile</button></p>
+	<div class="row-home">
+		<div class="column-home card-content">
+			<div class="title-row"><h3> THE UNIVERSITY OF MANCHESTER </h3></div>
+		</div>
+		<div class="column-home card-content" id="google-maps-home"></div>
+		<div class="column-home card-content">
+			<div class="title-row"><h3> SCHOOL OF COMPUTER SCIENCE </h3></div>
 		</div>
 	</div>
-	</div>
-	<div class="column2">
-	<div class="card">
-		<img src="image5.png" alt="ben" style="width:100%">
-		<div class="container">
-			<h2>BENJAMIN PIGGOTT</h2>
-			<p class="title">Some information</p>
-			<p>Some more info</p>
-			<p>Some more info</p>
-			<p><button class="button">Ben's Profile</button></p>
+
+	<div class="row-home">
+		<div class="column-home">
+			<div class="card-profile">
+				<img src="media/icon-profile.png" alt="Arya" class="img-profile">
+				<div class="container-profile">
+					<h2>ARYA JAHANGIRI</h2>
+					<p class="title-profile">Some information</p>
+					<p>Some more info</p>
+					<p>Some more info</p>
+					<p><button class="button-profile">Arya's Profile</button></p>
+				</div>
+			</div>
+		</div>
+		<div class="column-home">
+			<div class="card-profile">
+				<img src="media/icon-profile.png" alt="Ben" class="img-profile">
+				<div class="container-profile">
+					<h2>BENJAMIN PIGGOTT</h2>
+					<p class="title-profile">Some information</p>
+					<p>Some more info</p>
+					<p>Some more info</p>
+					<p><button class="button-profile">Ben's Profile</button></p>
+				</div>
+			</div>
+		</div>
+		<div class="column-home">
+			<div class="card-profile">
+				<img src="media/icon-profile.png" alt="Sana" class="img-profile">
+				<div class="container-profile">
+					<h2>SANA AFTAB</h2>
+					<p class="title-profile">Some information</p>
+					<p>Some more info</p>
+					<p>Some more info</p>
+					<p><button class="button-profile">Sana's Profile</button></p>
+				</div>
+			</div>
 		</div>
 	</div>
-	</div>
-	<div class="column2">
-	<div class="card">
-		<img src="image5.png" alt="sana" style="width:100%">
-		<div class="container">
-			<h2>SANA AFTAB</h2>
-			<p class="title">Some information</p>
-			<p>Some more info</p>
-			<p>Some more info</p>
-			<p><button class="button">Sana's Profile</button></p>
-		</div>
-	</div>
-	</div>
-</div>
-
-<div class="footer"> 
-	<h5>Copyright</h5>
-</div>
-
 </body>
+<footer>
+  <p id="timestamp">Last edited: 2018-04-13</p>
+</footer>
 </html>

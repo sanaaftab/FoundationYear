@@ -1,14 +1,12 @@
+/*
+SITE-WIDE
+*/
+
+/* Document definitions */
+
 html {
 	box-sixing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
 	font-family: Arial, Helvetica, sans-serif;
-	margin: 0;
 	background-color: #f2f2f2;
 }
 
@@ -17,192 +15,177 @@ body, html {
 	margin: 0;
 }
 
-.topnav {
-	overflow: hidden;
+/* Navigation bar */
+
+#wrap-navbar	{
+	width: 100%; /* Spans the width of the page */
+	height: 50px;
+	margin: 0; /* Ensures there is no space between sides of the screen and the menu */
+	z-index: 99; /* Makes sure that the menu remains on top of other page elements */
+	position: relative;
 	background-color: #111212;
 }
 
-.topnav a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-  	padding: 14px 25px;
-  	text-decoration: none;
-  	font-size: 17px;
+.navbar	{
+	height: 50px;
+  padding: 0;
+	margin: 0;
+	position: absolute; /* Ensures that the menu doesn’t affect other elements */
+	border-right: 1px solid #111212;
 }
 
-.topnav a:hover {
-	background-color: #ddd;
-  	color: black;
+.navbar li 	{
+		height: auto;
+		width: 150px;  /* Each menu item is 150px wide */
+		float: left;  /* This lines up the menu items horizontally */
+		text-align: center;  /* All text is placed in the center of the box */
+		list-style: none;  /* Removes the default styling (bullets) for the list */
+		font: normal 17px/1.2em Arial, Verdana, Helvetica;
+		padding: 0;
+		margin: 0;
+		background-color: #111212;
 }
 
-.topnav a.active {
-  	background-color: #511180;
-  	color: white;
+.navbar a	{
+		padding: 14.8px 0px;  /* Adds a padding on the top and bottom so the text appears centered vertically */
+		text-decoration: none;  /* Removes the default hyperlink styling. */
+		color: #f2f2f2; /* Text color is white */
+		display: block;
 }
 
-.dropdown {
-	float: left;
-	overflow: hidden;
-}
-
-.dropdown .dropbtn {
-	font-size: 17px;
-	border: none;
-	outline: none;
-	color: white;
-	padding: 14px 16px;
-	background-color: inherit;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-	background-color: #ddd;
-}
-
-.dropdown-content {
-	top: 48px;
-	display: none;
-	position: absolute;
+.navbar li:hover a {
 	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- 	z-index: 1;
-}
-
-.dropdown-content a {
-	float: none;
 	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
 }
 
-.dropdown-content a:hover {
-	background-color: #eee;
+.navbar li ul 	{
+ 		display: none;  /* Hides the drop-down menu */
+ 		height: auto;
+ 		margin: 0; /* Aligns drop-down box underneath the menu item */
+ 		padding: 0; /* Aligns drop-down box underneath the menu item */
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown:hover .dropdown-content {
-	display: block;
+.navbar li:hover ul 	{
+   display: block; /* Displays the drop-down box when the menu item is hovered over */
 }
+
+.navbar li ul li {
+	background-color: #f9f9f9;
+}
+
+.navbar li ul li a 	{
+	color: black;
+	}
+
+.navbar li ul li a:hover	{
+	background-color: #ddd;
+}
+
+/* Highlighting for current document in navigation bar */
+
+.active-navbar {
+	background-color: #511180;
+}
+
+.active-navbar-sub {
+	background-color: #8949b8;
+}
+
+.active-navbar-sub:hover {
+	background-color: #6d2d9c;
+}
+
+/* Footer */
+
+footer {
+	padding: 10px;
+	background-color: #111212;
+	color: #f2f2f2;
+}
+
+/*
+HOMEPAGE
+*/
 
 .logo {
 	float: right;
 	padding: 5px 8px 0px 5px;
 }
 
-.main {
-	min-height: 500px;
-	background-attachment: fixed;
-	background-image: url("uom.jpg");
+.main-home {
+	min-height: 400px;
+	max-height: 800px;
 	height: 80%;
+	background-attachment: fixed;
+	background-image: url("media/homepage-background.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.row1 {
+/* Content cards */
+
+.title-row-home {
+	padding: 5px 10px;
+	color: grey;
+}
+
+.row-home {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.column {
-	float: left;
-	width: 33.33%;
-	height: 400px;
-}
-
-.title1 {
-	padding: 5px 10px;
-}
-
-.row1:after {
-  	content: "";
-   	display: table;
-    	clear: both;
-}
-
-.row2 {
 	padding: 10px 20px;
 }
 
-.column2 {
+.column-home {
 	float: left;
 	width: 32%;
 	margin-bottom: 16px;
 	padding: 0px 8px;
 }
 
-
-
-.card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-	padding: 0px 40px 0px 26px;
-}
-
-.container::after, .row2::after {
+.row-home:after {
 	content: "";
-	clear: both;
-	display: table;
+ 	display: table;
+  clear: both;
 }
 
-.title {
-	color: grey;
+.card-content{
+	height: 400px;
 }
 
-.button {
+/*Homepage profile cards*/
+
+.button-profile {
    	border: none;
     	outline: 0;
    	display: inline-block;
     	padding: 8px;
-    	color: white;
-    	background-color: #000;
+    	color: #f2f2f2;
+    	background-color: #111212;
     	text-align: center;
     	cursor: pointer;
     	width: 100%;
 }
 
-.button:hover {
-	background-color: #9f89b0;
+.button-profile:hover {
+	background-color: #511180;
 }
 
-.pagecolumn {
-	float: left;
-	height: 300px;
-	text-align: center;
+.img-profile {
+	width: 100%;
 }
 
-.left {
-	width: 65%;
-	background-color: #f2f2f2;
+.card-profile {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.right {
-	width: 35%;
-	background-color: #d9d9d9;
+.container-profile {
+	padding: 0px 40px 0px 26px;
 }
 
-.left2 {
-	width: 35%;
-	background-color: #d9d9d9;
-}
-
-.right2 {
-	width: 65%;
-	background-color: #f2f2f2;
-}
-
-.pagerow:after {
-  	content: "";
-    	display: table;
-    	clear: both;
-}
-
-.footer {
-	padding: 5px;
-	background-color: #111212;
-	color: white;
+.container-profile::after, .row2::after {
+	content: "";
+	clear: both;
+	display: table;
 }
