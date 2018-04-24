@@ -197,3 +197,46 @@ HOMEPAGE
 	clear: both;
 	display: table;
 }
+
+/*Page*/
+
+.pagecolumn {
+	float: left;
+	height: 350px;
+	text-align: left;
+}
+
+.left {
+	width: 72%;
+}
+
+.right {
+	width: 28%;
+	background-color: #d9d9d9;
+}
+
+.left2 {
+	width: 20%;
+}
+
+.right2 {
+	width: 80%;
+	float: right;
+}
+
+.pagerow:after {
+  	content: "";
+     	display: table;
+     	clear: both;
+ }
+
+.info {
+	padding: 0px 10px 20px 20px;
+	line-height: 30px;
+}
+
+.outer {
+	margin: 20px;
+}
+
+
