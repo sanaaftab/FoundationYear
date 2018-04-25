@@ -4,7 +4,6 @@
 
 #Extract title of html document to determine file name and then forced to lowercase
 title=$(grep -Po '(?<=(<title>)).*(?=</title>)' ../html/$1 | tr '[:upper:]' '[:lower:]')
-echo "this is $title"
 
 #Ensure no item is set to active in the document
 sed -e 's/class="active" //g' -i ../html/$1
