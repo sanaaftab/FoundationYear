@@ -210,30 +210,29 @@ HOMEPAGE
 /*Page*/
 
 .pagecolumn {
-	float: left;
 	height: 500px;
 	text-align: left;
 }
 
 .left {
-	width: 49%;
+	float: left;
 }
 
 .right {
-	width: 50%;
-	background-color: #d9d9d9;
 	float:right;
 }
 
-.left2 {
-	width: 50%;
-	background-color: #d9d9d9;
+.pagetext {
+	width: calc(98%-300px);
+  margin: 1%;
 }
 
-.right2 {
-	width: 49%;
-	float: right;
+.pageimage {
+  background-color: #d9d9d9;
+  height: 450px;
+  width: 450px;
 }
+
 
 .pagerow:after {
   	content: "";
@@ -246,12 +245,15 @@ HOMEPAGE
 		margin-right: 20%;
 		margin-top: 30px;
 		margin-bottom: 25px;
-}
-
-.pageheight {
-		height: 100%;
+    height: 100%;
 }
 
 .pagerow2 {
 		width: 100%;
+}
+
+.pagetext {
+  line-height: 1.2;
+  font-size: x-large;
+  word-spacing: 5px;
 }
