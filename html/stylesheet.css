@@ -223,11 +223,12 @@ HOMEPAGE
 }
 
 .pagetext {
-	width: calc(98%-300px);
+	width: calc(98% - 450px);
   margin: 1%;
   font-size: x-large;
   word-spacing: 6px;
   line-height: 1.2;
+  overflow: hidden;
 }
 
 .pageimage {
