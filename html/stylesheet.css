@@ -124,7 +124,7 @@ HOMEPAGE
 }
 
 .main-home {
-	height: 400px;
+	height: 500px;
 	background-attachment: fixed;
 	background-image: url("media/mainpic.jpg");
 	background-position: center;
@@ -211,37 +211,47 @@ HOMEPAGE
 
 .pagecolumn {
 	float: left;
-	height: 350px;
+	height: 500px;
 	text-align: left;
 }
 
 .left {
-	width: 72%;
+	width: 49%;
 }
 
 .right {
-	width: 28%;
+	width: 50%;
 	background-color: #d9d9d9;
+	float:right;
 }
 
 .left2 {
-	width: 28%;
+	width: 50%;
 	background-color: #d9d9d9;
 }
 
 .right2 {
-	width: 72%;
+	width: 49%;
 	float: right;
 }
 
 .pagerow:after {
   	content: "";
-     	display: table;
-     	clear: both;
+    display: table;
+    clear: both;
  }
 
-.outer {
-	margin: 20px;
+.margin {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: 30px;
+		margin-bottom: 25px;
 }
 
+.pageheight {
+		height: 100%;
+}
 
+.pagerow2 {
+		width: 100%;
+}
