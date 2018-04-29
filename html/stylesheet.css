@@ -209,11 +209,6 @@ HOMEPAGE
 
 /*Page*/
 
-.pagecolumn {
-	height: 500px;
-	text-align: left;
-}
-
 .left {
 	float: left;
 }
@@ -225,6 +220,9 @@ HOMEPAGE
 .pagetext {
 	width: calc(98%-300px);
   margin: 1%;
+  font-size: x-large;
+  word-spacing: 6px;
+  line-height: 1.2;
 }
 
 .pageimage {
@@ -245,14 +243,17 @@ HOMEPAGE
 		margin-right: 20%;
 		margin-top: 30px;
 		margin-bottom: 25px;
-    height: 100%;
+    min-height: 100%;
 }
 
-.pagerow2 {
-		width: 100%;
+.pagerow {
+  width: 100%;
+  overflow: auto;
 }
 
-.pagetext {
+/* Profile Pages */
+
+.profiletext {
   line-height: 1.2;
   font-size: x-large;
   word-spacing: 5px;
