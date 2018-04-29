@@ -114,8 +114,10 @@ footer {
 	color: #f2f2f2;
 }
 
-.footerpic {
+.footer-logo {
 	float: right;
+  width: 112;
+  height: 35;
 }
 
 
@@ -254,7 +256,6 @@ HOMEPAGE
 
 .pagerow {
   width: 100%;
-  overflow: auto;
 }
 
 /* Profile Pages */
