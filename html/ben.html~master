@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Ben</title>
+	<link rel="shortcut icon" href="http://foundationyear.lancelab.eu/favicon.ico" />
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<div id="wrap-navbar">
+		<ul class="navbar">
+			<li><a href="homepage.html">HOME</a></li>
+			<li><a href="uom.html">UoM</a></li>
+			<li><a href="socs.html">SoCS</a></li>
+			<li><a class="active-navbar" href="">MEMBERS</a>
+				<ul>
+					<li><a href="arya.html">ARYA</a></li>
+					<li><a class="active-sub-navbar" href="ben.html">BEN</a></li>
+					<li><a href="sana.html">SANA</a></li>
+				</ul>
+			</li>
+			<li><a href="">INFO</a>
+				<ul>
+					<li><a href="markup.html">MARKUP</a></li>
+					<li><a href="scripting.html">SCRIPTING</a></li>
+					<li><a href="technology.html">TECHNOLOGY</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</head>
+<body>
+
+<div class="margin">
+	<div class="pagerow">
+		<div class="pagetext left">
+			<h3>Benjamin N. Piggott</h3>
+			<ul>
+				<li>Bristol, United Kingdom</li>
+				<li>11th May 1999</li>
+				<li>Interested in High Performance Computing</li>
+				<li>Plays in the Campus hockey league</li>
+			</ul>
+		</div>
+		<div class="pageimage right">
+			<img class="pageimage" src="media/ben.jpg" alt="ben">
+		</div>
+	</div>
+
+	<div class="pagerow">
+		<div class="profiletext">
+			<p>I am a member of the Computer Science Society and Hack Society. Recently I helped organise and run StudentHack VI as a member of the logistics team.</p>
+			<p>I have had a keen interested in computers since I was about 10. I built my first computer when I was 13 and now I have a homelab which I tinker with frequently.</p>
+		</div>
+	</div>
+</div>
+
+</body>
+<footer>
+	<div>
+		<div class="footer-logo">
+			<a href="http://www.manchester.ac.uk"><img src="media/logo.png"/></a>
+		</div>
+	</div>
+	<p id="timestamp">Last edited: 2018-04-29</p>
+</footer>
+</html>

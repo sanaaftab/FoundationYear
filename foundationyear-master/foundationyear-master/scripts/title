@@ -1,9 +1,0 @@
-#!/bin/bash
-#Script to updae the title of a webpage to the name of the html document
-#By Benjamin Piggott, 2018
-
-#Variable to store the filename with file extension removed
-name=$(echo $1 | cut -f 1 -d '.')
-
-#Replace the current title in the document with the filename
-sed -r -i "s|<title>.*</title>|<title>${name^}</title>|g" ../html/$1
