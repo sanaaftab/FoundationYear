@@ -1,0 +1,273 @@
+/*
+SITE-WIDE
+*/
+
+/* Document definitions */
+
+html {
+	box-sixing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f2f2f2;
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation bar */
+
+#wrap-navbar	{
+	width: 100%; /* Spans the width of the page */
+	height: 50px;
+	margin: 0; /* Ensures there is no space between sides of the screen and the menu */
+	z-index: 99; /* Makes sure that the menu remains on top of other page elements */
+	position: relative;
+	background-color: #111212;
+}
+
+.navbar	{
+	height: 50px;
+  padding: 0;
+	margin: 0;
+	position: absolute; /* Ensures that the menu doesn’t affect other elements */
+	border-right: 1px solid #111212;
+}
+
+.navbar li 	{
+		height: auto;
+		width: 150px;  /* Each menu item is 150px wide */
+		float: left;  /* This lines up the menu items horizontally */
+		text-align: center;  /* All text is placed in the center of the box */
+		list-style: none;  /* Removes the default styling (bullets) for the list */
+		font: normal 17px/1.2em Arial, Verdana, Helvetica;
+		padding: 0;
+		margin: 0;
+		background-color: #111212;
+}
+
+.navbar a	{
+		padding: 14.8px 0px;  /* Adds a padding on the top and bottom so the text appears centered vertically */
+		text-decoration: none;  /* Removes the default hyperlink styling. */
+		color: #f2f2f2; /* Text color is white */
+		display: block;
+}
+
+.navbar li:hover a {
+	background-color: #f9f9f9;
+	color: black;
+}
+
+.navbar li ul 	{
+ 		display: none;  /* Hides the drop-down menu */
+ 		height: auto;
+ 		margin: 0; /* Aligns drop-down box underneath the menu item */
+ 		padding: 0; /* Aligns drop-down box underneath the menu item */
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.navbar li:hover ul 	{
+   display: block; /* Displays the drop-down box when the menu item is hovered over */
+}
+
+.navbar li ul li {
+	background-color: #f9f9f9;
+}
+
+.navbar li ul li a 	{
+	color: black;
+	}
+
+.navbar li ul li a:hover	{
+	background-color: #ddd;
+}
+
+/* Highlighting for current document in navigation bar */
+
+.active-navbar {
+	background-color: #511180;
+}
+
+.active-navbar:hover {
+	background-color: #f9f9f9;
+}
+
+.active-sub-navbar {
+	background-color: #8949b8 !important;
+	color: #f2f2f2 !important;
+}
+
+.active-sub-navbar:hover {
+	background-color: #6d2d9c !important;
+}
+
+/* Footer */
+
+footer {
+	padding: 10px;
+	background-color: #111212;
+	color: #f2f2f2;
+}
+
+.footer-logo {
+	float: right;
+  width: 112;
+  height: 35;
+}
+
+
+/*
+HOMEPAGE
+*/
+
+.logo {
+	float: right;
+	padding: 5px 8px 0px 5px;
+}
+
+.main-home {
+	height: 500px;
+	background-attachment: fixed;
+	background-image: url("media/mainpic.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Content cards */
+
+.title-row-home {
+	padding: 5px 10px;
+	color: grey;
+}
+
+.row-home {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 20px;
+}
+
+.column-home {
+	float: left;
+	width: 32%;
+	margin-bottom: 16px;
+	padding: 0px 8px;
+}
+
+.row-home:after {
+	content: "";
+ 	display: table;
+  clear: both;
+}
+
+.card-content{
+	height: 400px;
+}
+
+.info {
+	line-height: 30px;
+}
+
+.title-profile-card {
+  font-weight: bold;
+}
+
+/*Homepage profile cards*/
+
+.button-profile {
+   	border: none;
+    	outline: 0;
+   	display: inline-block;
+    	padding: 8px;
+    	color: #f2f2f2;
+    	background-color: #111212;
+    	text-align: center;
+    	cursor: pointer;
+    	width: 100%;
+}
+
+.button-profile:hover {
+	background-color: #511180;
+}
+
+.img-profile {
+	width: 100%;
+}
+
+.card-profile {
+	margin: 0 auto;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #111212;
+	width: 70%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-profile {
+	padding: 0px 40px 0px 26px;
+}
+
+.container-profile::after, .row2::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*Page*/
+
+.left {
+	float: left;
+}
+
+.right {
+	float:right;
+}
+
+.pagetext {
+	width: calc(98% - 450px);
+  margin: 1%;
+  font-size: x-large;
+  word-spacing: 6px;
+  line-height: 1.2;
+}
+
+.pageimage {
+  height: 450px;
+  width: 450px;
+}
+
+
+.pagerow:after {
+  	content: "";
+    display: table;
+    clear: both;
+ }
+
+.margin {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: 30px;
+		margin-bottom: 25px;
+    min-height: 100%;
+}
+
+.pagerow {
+  width: 100%;
+}
+
+/* Profile Pages */
+
+.profiletext {
+  line-height: 1.2;
+  font-size: x-large;
+  word-spacing: 5px;
+}
+
+.pagetext li {
+  line-height: 2.0;
+}

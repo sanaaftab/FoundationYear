@@ -1,0 +1,13 @@
+#!/bin/bash
+#Script to update the rank of the university in a html document
+#from a web source
+#By Benjamin Piggott, 2018
+
+#Retrieve the webpage to extract the ranking from
+rank=$(curl -s https://www.timeshighereducation.com/world-university-rankings/university-manchester#pane-university-rankings-chart | sed -n '/rank__number/,/div/p' | sed -n '/span/,/span/p' | sed -n '/rank__number/,/\/span/p' | sed 's/[^0-9]*//g' | tr -d '\n' )
+
+#Update span in hompage html document
+sed -i "s|<span>[0-9]\+</span>|<span>$rank</span>|g" ../html/$1
+
+#Updating last edit timestamp in the footer of the document
+timestamp ../html/$1
